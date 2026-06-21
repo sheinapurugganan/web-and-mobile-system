@@ -1,0 +1,107 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+        }
+
+        .calculator {
+            width: 240px;
+            margin: 60px auto;
+            padding: 18px;
+            border-radius: 18px;
+            background: #4a90e2;
+            box-shadow: 0 10px 25px #1e3a8a;
+        }
+
+        /* DISPLAY AREA */
+        .display {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        #valueBox {
+            width: 75%;
+            height: 60px;
+            font-size: 26px;
+            text-align: right;
+            padding: 10px;
+            background: #eff6ff;
+            border-radius: 12px;
+            border: 2px solid #1e3a8a;
+            color: #1d4ed8;
+        }
+
+        #operatorBox {
+            width: 25%;
+            height: 60px;
+            font-size: 26px;
+            text-align: center;
+            padding: 10px;
+            background: #dbeafe;
+            border-radius: 12px;
+            border: 2px solid #1e3a8a;
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        /* BUTTONS */
+        .btn {
+            height: 46px;
+            width: 46px;
+            margin: 4px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            background: #93c5fd;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            
+        }
+
+        .btn:hover {
+            background: #3b82f6;
+            transform: scale(1.05);
+        }
+
+        .button {
+            height: 46px;
+            width: 98px;
+            margin: 4px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #1e40af;
+            transform: scale(1.05);
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #5b21b6;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(118, 81, 147, 0.2);
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            color: #7c3aed;
+        }
