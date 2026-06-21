@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Info</title>
+  <link rel="stylesheet" href="./css/stud.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Information</h2>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search student name">
+      <button onclick="searchStudent()">Search</button>
+    </div>
+
+    <div class="btn-group">
+      <button onclick="filterStudents('all')">All</button>
+      <button onclick="filterStudents('present')">Present</button>
+      <button onclick="filterStudents('absent')">Absent</button>
+      <button onclick="filterStudents('passed')">Passed</button>
+      <button onclick="filterStudents('failed')">Failed</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sub 1</th>
+          <th>Sub 2</th>
+          <th>Sub 3</th>
+          <th>Average</th>
+          <th>Attendance</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+  </div>
+
+  <script src="./js/fetch.js"></script>
+</body>
+</html>
