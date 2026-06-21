@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* White & Purple Color Palette */
+    --bg-color: hsl(270, 30%, 97%);
+    --card-bg: hsla(0, 0%, 100%, 0.85);
+    --glass-bg: hsla(0, 0%, 100%, 0.70);
+    --text-primary: hsl(270, 25%, 18%);
+    --text-secondary: hsl(270, 10%, 50%);
+    --accent-primary: hsl(270, 85%, 60%);
+    --accent-secondary: hsl(280, 70%, 72%);
+    --accent-light: hsl(270, 100%, 96%);
+    --danger: hsl(0, 75%, 58%);
+    --success: hsl(145, 60%, 42%);
+
+    --border-radius: 14px;
+    --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-premium: 0 8px 32px 0 rgba(160, 80, 220, 0.10);
+    --shadow-card: 0 2px 16px 0 rgba(140, 60, 200, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    background-image:
+        radial-gradient(circle at 15% 10%, hsla(270, 85%, 75%, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, hsla(280, 70%, 80%, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.5) 0%, transparent 70%);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ── Navbar ── */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid hsla(270, 60%, 80%, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px hsla(270, 70%, 70%, 0.08);
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-primary);
+    background: var(--accent-light);
+}
+
+/* ── Glass Card ── */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsla(270, 60%, 85%, 0.4);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow-premium);
+    margin-bottom: 2rem;
+}
+
+/* ── Dashboard Header ── */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(120deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ── Buttons ── */
+.btn {
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: #fff;
+    box-shadow: 0 4px 14px hsla(270, 85%, 60%, 0.30);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px hsla(270, 85%, 60%, 0.40);
+}
+
+.btn-danger {
+    background: hsla(0, 75%, 58%, 0.08);
+    color: var(--danger);
+    border: 1px solid hsla(0, 75%, 58%, 0.35);
+}
+
+.btn-danger:hover {
+    background: var(--danger);
+    color: #fff;
+    border-color: var(--danger);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid hsla(270, 60%, 75%, 0.5);
+    color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent-primary);
+    background: var(--accent-light);
+    color: var(--accent-primary);
+}
+
+/* ── Table ── */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+th {
+    text-align: left;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem;
+    border-bottom: 2px solid hsla(270, 60%, 85%, 0.5);
+}
+
+td {
+    padding: 1.1rem 1rem;
+    border-bottom: 1px solid hsla(270, 50%, 90%, 0.6);
+    color: var(--text-primary);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: hsla(270, 80%, 97%, 0.6);
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.badge-stock {
+    background: hsla(145, 60%, 42%, 0.10);
+    color: var(--success);
+    border: 1px solid hsla(145, 60%, 42%, 0.2);
+}
+
+.badge-low {
+    background: hsla(0, 75%, 58%, 0.08);
+    color: var(--danger);
+    border: 1px solid hsla(0, 75%, 58%, 0.2);
+}
+
+/* ── Form Styles ── */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: hsla(270, 40%, 98%, 0.8);
+    border: 1.5px solid hsla(270, 50%, 82%, 0.5);
+    border-radius: 10px;
+    color: var(--text-primary);
+    outline: none;
+    transition: var(--transition-smooth);
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-primary);
+    background: #fff;
+    box-shadow: 0 0 0 3px hsla(270, 85%, 60%, 0.12);
+}
+
+input::placeholder, textarea::placeholder {
+    color: hsl(330, 10%, 70%);
+}
+
+/* ── Flash Messages ── */
+.flash-container {
+    margin-bottom: 1rem;
+}
+
+.flash-msg {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: hsla(270, 100%, 96%, 0.9);
+    border: 1px solid hsla(270, 85%, 70%, 0.4);
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* ── Page Title (forms) ── */
+.page-title {
+    margin-bottom: 1.5rem;
+}
+
+.page-title h1 {
+    font-size: 1.6rem;
+}
