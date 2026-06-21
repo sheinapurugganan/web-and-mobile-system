@@ -1,0 +1,31 @@
+
+Body {
+    Background-color: #f0f2f5; /* A soft, neutral grey/blue */
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    Height: 100vh; 
+    Margin: 0;
+    Font-family: sans-serif;
+}
+
+
+.container {
+    Background-color: #f09114; 
+    Padding: 30px;
+    Border-radius: 8px; /* Rounded corners */
+    Box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    Width: 100%;
+    Max-width: 400px; 
+}
+
+
+Input {
+    Width: 100%;
+    Padding: 10px;
+    Margin: 10px 0 20px 0;
+    Border: 1px solid #ccc;
+    Border-radius: 4px;
+    Box-sizing: border-box; 
+}
+
