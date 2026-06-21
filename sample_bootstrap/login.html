@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory System — Login</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <style>
+    :root{
+      --bs-primary: #ffc107; /* yellow */
+      --bs-body-bg: #fffdf5; /* very light yellow background */
+    }
+    body{ background-color: var(--bs-body-bg); }
+    .card{ border-radius:12px; }
+    #message{ min-height:1.25rem; }
+  </style>
+</head>
+
+<body class="bg-light">
+  <div class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="card shadow-sm" style="max-width:420px; width:100%;">
+      <div class="card-body p-4">
+        <h3 class="text-center mb-3 text-primary">Welcome</h3>
+        <p class="text-center text-muted mb-4">Sign in to continue to the Inventory</p>
+
+        <div id="message" class="text-center mb-3"></div>
+
+        <form id="loginForm" action="items.html" method="get">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input id="username" name="username" type="text" class="form-control" placeholder="Enter username" required autofocus>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" name="password" type="password" class="form-control" placeholder="Enter password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>
